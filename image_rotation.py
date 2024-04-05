@@ -12,7 +12,7 @@ def rotate_and_save(img, save_path_prefix, number):
 def open_images_in_directory(directory):
     files = os.listdir(directory)
 
-    image_files = [file for file in files if file.lower().endswith(('.jpg', 'jpeg', '.png', '.bmp', '.HEIC'))]
+    image_files = [file for file in files if file.lower().endswith(('.jpg', 'jpeg', '.png'))]
     count = 0
 
     for image_file in image_files:
@@ -21,4 +21,4 @@ def open_images_in_directory(directory):
         rotate_and_save(img, 'C:/H5SH/Other_Projects/image_rotation/rotated_img/', count)
         count += 1
 
-open_images_in_directory('C:/H5SH/Other_Projects/image_rotation/data_set')
+open_images_in_directory('C:\H5SH\Other_Projects\image_rotation\Images')

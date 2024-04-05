@@ -1,3 +1,6 @@
-/data_set
+*.jpg
+*.png
+*.jpeg
+*.heic
 
-/rotated_img
+/pillow_heif
