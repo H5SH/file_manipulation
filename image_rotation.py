@@ -2,23 +2,24 @@ from PIL import Image
 import os
 
 
-def rotate_and_save(img, save_path_prefix, number):
+def rotate_and_save(img, save_path_prefix):
     for angle in [0, 90, 180, 270]:
         rotated_img = img.rotate(angle, expand=True)
-        save_path = f"{save_path_prefix}_rotated_{angle}_{number}Image.png"
+        save_path = f"{save_path_prefix}_rotated_{angle}_Image.png"
         rotated_img.save(save_path)
 
+save_directory = 'C:/H5SH/Other_Projects/Ai-Attendance-System/rotated_img'
+images_directory = 'C:\H5SH\Other_Projects\image_rotation_and_heic_to_png\png_images'
 
 def open_images_in_directory(directory):
     files = os.listdir(directory)
-
     image_files = [file for file in files if file.lower().endswith(('.jpg', 'jpeg', '.png'))]
-    count = 0
 
     for image_file in image_files:
         image_path = os.path.join(directory, image_file)
+        save_path = os.path.join(save_directory, os.path.splitext(image_file)[0]) 
         img = Image.open(image_path)
-        rotate_and_save(img, 'C:/H5SH/Other_Projects/image_rotation/rotated_img/', count)
-        count += 1
+        rotate_and_save(img, save_path)
 
-open_images_in_directory('C:\H5SH\Other_Projects\image_rotation\Images')
+
+open_images_in_directory(images_directory)
