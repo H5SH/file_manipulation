@@ -10,11 +10,13 @@ def convert_heic_to_png(heic_path, png_path):
     except Exception as e:
         print(e)
 
-heic_directory = "C:\H5SH\Other_Projects\image_rotation_and_heic_to_png\Images"
+heic_directory = ""
 
-png_directory = "C:\H5SH\Other_Projects\image_rotation_and_heic_to_png\png_images"
+png_directory = ""
 
-for file in os.listdir('C:\H5SH\Other_Projects\image_rotation_and_heic_to_png\Images'):
+img_path = ""
+
+for file in os.listdir(img_path):
     if file.endswith('.HEIC') or file.endswith(('.heic', 'jpg', 'jpeg')):
         heic_path = os.path.join(heic_directory, file)
         png_path = os.path.join(png_directory, os.path.splitext(file)[0] + ".png")

@@ -8,8 +8,8 @@ def rotate_and_save(img, save_path_prefix):
         save_path = f"{save_path_prefix}_rotated_{angle}_Image.png"
         rotated_img.save(save_path)
 
-save_directory = 'C:/H5SH/Other_Projects/Ai-Attendance-System/rotated_img'
-images_directory = 'C:\H5SH\Other_Projects\image_rotation_and_heic_to_png\png_images'
+save_directory = ''
+images_directory = ''
 
 def open_images_in_directory(directory):
     files = os.listdir(directory)

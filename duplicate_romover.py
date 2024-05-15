@@ -30,7 +30,7 @@ def delete_duplicates(duplicates):
         print(f"{duplicate} Deleted")
 
 if __name__ == '__main__':
-    directory = 'C:\H5SH\Other_Projects\image_rotation_and_heic_to_png\png_images'
+    directory = ''
     duplicates = find_duplicates(directory)
     if duplicates:
         delete_duplicates(duplicates)
