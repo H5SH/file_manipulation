@@ -38,7 +38,7 @@ def rename_txt_files(directory):
 # Specify the directory containing the .png files
 img_directory_path = 'C:/H5SH/Other_Projects/Ai-Attendance-System/train/images'
 txt_directory_path = 'C:/H5SH/Other_Projects/Ai-Attendance-System/train/labels'
-rename_txt_files(txt_directory_path)
+# rename_txt_files(txt_directory_path)
 rename_img_files(img_directory_path)
 
 
